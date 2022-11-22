@@ -1,11 +1,13 @@
 # BlinkC++
-C++ Program To Blink An LED On A Raspberry Pi With The WiringPi Library
 
-## Compile:
-% g++ -Wall -lwiringPi -o blink blink.cpp
+## [blink_pigpio.cpp](blink_pigpio.cpp) Program
+A C++ program that blinks an LED on a Raspberry Pi using the pigpio library.
 
-## Run:
-% ./blink
+## Compile
+$ g++ -Wall -o blink_pigpio blink_pigpio.cpp -lpigpio
 
-## Exit:
+## Run
+$ sudo ./blink_pigpio
+
+## Exit
 CTRL-C

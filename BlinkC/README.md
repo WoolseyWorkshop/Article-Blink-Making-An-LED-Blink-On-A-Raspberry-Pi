@@ -1,11 +1,13 @@
 # BlinkC
-C Program To Blink An LED On A Raspberry Pi With The WiringPi Library
 
-## Compile:
-% gcc -Wall -lwiringPi -o blink blink.c
+## [blink_pigpio.c](blink_pigpio.c) Program
+A C program that blinks an LED on a Raspberry Pi using the pigpio library.
 
-## Run:
-% ./blink
+## Compile
+$ gcc -Wall -o blink_pigpio blink_pigpio.c -lpigpio
 
-## Exit:
+## Run
+$ sudo ./blink_pigpio
+
+## Exit
 CTRL-C
