@@ -1,23 +1,26 @@
 # BlinkCommandLine
-Blink An LED On A Raspberry Pi With The gpio Command Line Utility
+Blink an LED on a Raspberry Pi with the raspi-gpio command line utility.
 
-## Install:
-% sudo apt-get install wiringpi
+## View Help
+$ raspi-gpio help
 
-## View Help:
-% gpio -h
+## Read All GPIO Pins
+$ raspi-gpio get
 
-## View Pinouts:
-% gpio readall
+## Read A Single GPIO Pin (21)
+$ raspi-gpio get 21
 
-## Set Pin Mode:
-% gpio mode 29 out
+## Set A Single GPIO Pin (21) As An Input
+$ raspi-gpio set 21 ip
 
-## Turn On LED:
-% gpio write 29 1
+## Set A Single GPIO Pin (21) As An Output
+$ raspi-gpio set 21 op
 
-## Turn Off LED:
-% gpio write 29 0
+## Drive A Single GPIO Pin (21) Low (Turn Off The LED)
+$ raspi-gpio set 21 dl
 
-## Reset LED Resource
-% gpio mode 29 in
+## Drive A Single GPIO Pin (21) High (Turn On The LED)
+$ raspi-gpio set 21 dh
+
+## Reset The LED Resource (Set GPIO Pin 21 Back To An Input)
+$ raspi-gpio set 21 ip
