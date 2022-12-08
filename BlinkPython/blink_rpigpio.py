@@ -34,5 +34,5 @@ try:
         sleep(1)                         # wait a second
         GPIO.output(RED_LED, GPIO.LOW)   # turn off LED
         sleep(1)                         # wait a second
-finally:  # Exit cleanly when CTRL-C is pressed
-    GPIO.cleanup()  # release all GPIO resources
+finally:  # exit cleanly when CTRL-C is pressed
+    GPIO.cleanup()  # reset all GPIO resources
