@@ -22,7 +22,7 @@ const int RedLED = 21;
 
 
 // Global Variables
-volatile sig_atomic_t signal_received = 0;  // signal interrupt received
+volatile sig_atomic_t signal_received = 0;  // interrupt signal received
 
 
 // Signal Interrupt Handler
@@ -42,7 +42,7 @@ int main() {
    // Pin configuration
    gpioSetMode(RedLED, PI_OUTPUT);  // set RedLED pin as an output
 
-   // Detect when CRTL-C is pressed
+   // Detect when CTRL-C is pressed
    signal(SIGINT, sigint_handler);  // enable interrupt handler
 
    // Blink LED
